@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+body {
+    display: grid;
+    place-items: center; 
+    font-size: 12px;
+}
+
+.game-area {
+    display: grid;
+    place-items: center; /* 水平方向・垂直方向ともに中央揃え */
+    height: 50vh;
+    border-collapse: collapse;
+}
+
+.game-area td{
+    padding: 0;
+    border: 2px solid #000;
+}
+
+.game-area td button {
+    appearance: none;
+    border: none;
+    background: #aaa;
+    padding: 3rem;
+}
+
+.game-area td button[data-shape="Bear"] {
+    width: 96px; /* 要素の幅 */
+    height: 96px; /* 要素の高さ */
+    background: url(../img/三目並べ用くま.png) no-repeat center; /* 背景画像を中央に配置 */
+    background-size: 96px 96px; /* 背景画像を縮小 */
+}
+
+.game-area td button[data-shape="Goat"] {
+    width: 96px; /* 要素の幅 */
+    height: 96px; /* 要素の高さ */
+    background: url(../img/三目並べ用やぎ.png) no-repeat center; /* 背景画像を中央に配置 */
+    background-size: 96px 96px; /* 背景画像を縮小 */
+}
+
+
+.hand-list {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.hand-list li{
+    width: 96px;
+    height: 96px;
+    cursor: pointer;
+}
+
+.hand-list li[data-shape="Bear"] {
+    width: 96px; /* 要素の幅 */
+    height: 96px; /* 要素の高さ */
+    background: url(../img/三目並べ用くま.png) no-repeat center; /* 背景画像を中央に配置 */
+    background-size: 96px 96px; /* 背景画像を縮小 */
+}
+
+.hand-list li[data-shape="Goat"] {
+    width: 96px; /* 要素の幅 */
+    height: 96px; /* 要素の高さ */
+    background: url(../img/三目並べ用やぎ.png) no-repeat center; /* 背景画像を中央に配置 */
+    background-size: 96px 96px; /* 背景画像を縮小 */
+}

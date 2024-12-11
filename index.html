@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>まるばつゲーム</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>まるばつゲーム</h1>
+    </header>
+    <main><!--盤面-->
+        <table id="game-area" class="game-area">
+            <tbody>
+                <tr>
+                    <td><button class="game-cell" data-row="0" data-col="0"></button></td>
+                    <td><button class="game-cell" data-row="0" data-col="1"></button></td>
+                    <td><button class="game-cell" data-row="0" data-col="2"></button></td>
+                </tr>
+                <tr>
+                    <td><button class="game-cell" data-row="1" data-col="0"></button></td>
+                    <td><button class="game-cell" data-row="1" data-col="1"></button></td>
+                    <td><button class="game-cell" data-row="1" data-col="2"></button></td>
+                </tr>
+                <tr>
+                    <td><button class="game-cell" data-row="2" data-col="0"></button></td>
+                    <td><button class="game-cell" data-row="2" data-col="1"></button></td>
+                    <td><button class="game-cell" data-row="2" data-col="2"></button></td>
+                </tr>
+            </tbody>
+        </table>
+        <section>
+            <div>カードをドラッグして置きたい場所にドロップしてください。</div>
+            <ul class="hand-list">
+                <li id="list-Bear" draggable="true" data-shape="Bear"></li>
+                <li id="list-Goat" draggable="true" data-shape="Goat"></li>
+            </ul>
+        </section>
+        <section id="victory-message" style="display: none; text-align: center; font-size: 20px; color: green; margin-top: 20px;">
+            勝利しました！
+        </section>
+        <button id="reset-button" style="display: block; margin: 20px auto; padding: 10px 20px; font-size: 16px;">再戦</button>
+
+    </main>
+</body>
+<script src=".//js/script.js"></script>
+</html>
